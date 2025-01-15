@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trowgrow - Skilling Up Generations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            background: #333;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        header nav a:hover {
+            background: #555;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        footer form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer button {
+            padding: 10px 20px;
+            background: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        footer button:hover {
+            background: #555;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            transition: background 0.3s;
+        }
+
+        .back-to-top:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Trowgrow</div>
+        <nav>
+            <a href="#vision">Vision</a>
+            <a href="#events">Upcoming Events</a>
+            <a href="#about">About Us</a>
+            <a href="#whats-new">What's New</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Trowgrow</h1>
+        <p>Empowering the young generation with skills and digital know-how to thrive in a digital-first world.</p>
+    </div>
+
+    <section id="vision" class="content-section">
+        <h2>Our Vision</h2>
+        <p>To bridge the gap between aspirations and opportunities by providing top-notch tutorials and guidance.</p>
+    </section>
+
+    <section id="events" class="content-section">
+        <h2>Upcoming Events</h2>
+        <p>Stay tuned for our interactive workshops and webinars to boost your digital skills.</p>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>About Us</h2>
+        <p>Trowgrow is a platform dedicated to teaching AI tools, Adobe Suite, POD, KDP business, programming, and personal development.</p>
+    </section>
+
+    <section id="whats-new" class="content-section">
+        <h2>What's New</h2>
+        <p>Check out our latest tutorials on AI and digital productivity tools to stay ahead of the curve.</p>
+    </section>
+
+    <footer>
+        <h2>Stay Connected</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+
+    <div class="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <script>
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
